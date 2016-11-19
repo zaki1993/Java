@@ -17,16 +17,19 @@ public class Binary {
 		int fifthBit = (y >> 5) % 10;
 		
 		//checks the number of ones in the number
-		int numberOfOnes = 3;
-		numberOfOnes = numberOfOnes - ((numberOfOnes >>> 1) & 0x55555555);
-		numberOfOnes = (numberOfOnes & 0x33333333) + ((numberOfOnes >>> 2) & 0x33333333);
-		numberOfOnes = (numberOfOnes + (numberOfOnes >>> 4)) & 0x0f0f0f0f;
-		numberOfOnes = numberOfOnes + (numberOfOnes >>> 8);
-		numberOfOnes = numberOfOnes + (numberOfOnes >>> 16);
+		int number = 3;
+		int numberOfOnes = 32 - Integer.numberOfLeadingZeros(number); // 32 is the size of the int
+		
+		//checks the general zeros and ones in 2 numbers
+		int number1 = 3;
+		int number2 = 5;
+		int generalNumbers = 32 - Integer.numberOfLeadingZeros(number1 & number2);
 		
 		System.out.println(sum);
 		System.out.println(subtract);
 		System.out.println(fifthBit);
 		System.out.println(numberOfOnes);
+		System.out.println(generalNumbers);
+		System.out.println(generalNumbers);
 	}
 }
