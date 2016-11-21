@@ -14,7 +14,7 @@ public class Binary {
 		int subtract = ~y - ~x;
 		
 		//checks the fifth bit
-		int fifthBit = (y >> 5) % 10;
+		int fifthBit = (y >> 5) % 2;
 		
 		//checks the number of ones in the number
 		int number = 3;
