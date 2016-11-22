@@ -21,7 +21,7 @@ public class Task10 {
 			System.out.println(getReminder/3 + " dopulnitelno po 3 litra");
 		}
 		else{
-			System.out.println(getAmount - 1 + " po 2 litra");
+			System.out.println((getAmount - 1) + " po 2 litra");
 			System.out.println((getAmount + 1) + " po 3 litra");
 		}
 	}
