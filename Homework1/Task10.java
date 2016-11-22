@@ -5,7 +5,7 @@ public class Task10 {
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		int cubic;
-		System.out.println("Pleas, enter the amount of water: ");
+		System.out.println("Please, enter the amount of water: ");
 		cubic = input.nextInt();
 		//Tui kato pulnim ednovremenno s 2 i 3 litrovi kofi 2 + 3 = 5
 		int getReminder = cubic%5;
