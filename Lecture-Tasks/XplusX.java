@@ -17,7 +17,7 @@ public class Task11 {
 		
 		int spacesBetween = x;
 		
-		if(x % 2 == 0){
+		if(x % 2 == 0 || x < 3){
 			System.out.println("Invalid input");
 		}
 		else{

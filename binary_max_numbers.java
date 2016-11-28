@@ -8,8 +8,8 @@ public class Max {
 		int a = 2;
 		int b = 16;
 		int c = a - b;  
-	    int k = (c >> 31) & 0x1;  
-	    int max = a - k * c;  
+	    	int k = (c >> 31) & 0x1;  
+		int max = a - k * c;  
 		System.out.println(max);
 	}
 }
