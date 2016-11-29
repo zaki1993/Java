@@ -18,7 +18,7 @@ public class Task1 {
 				min = arr[i];
 			}
 		}
-		if(min == a[0] && a[0]%3!=0){
+		if(min%3!=0){
 			System.out.println("There is no such element");
 		}
 		else{
