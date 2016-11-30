@@ -9,6 +9,7 @@ public class Task8 {
 		System.out.println("Enter the length of the array: ");
 		m = input.nextInt();
 		int[] arr = new int[m];
+		int number = 0;
 		for(int i = 0;i<arr.length;i++){
 			System.out.println("Please enter element number[" + i + "]: ");
 			arr[i] = input.nextInt();
@@ -16,6 +17,7 @@ public class Task8 {
 		for(int i = 1;i<arr.length;i++){
 			if(arr[i] == arr[i-1]){
 				current++;
+				number = arr[i];
 			}
 			else{
 				if(previous<current){
@@ -24,7 +26,9 @@ public class Task8 {
 				current = 1;
 			}
 		}
-		System.out.println("The longest streak is: " + previous);
+		for(int i = 0 ;i<current;i++){
+			System.out.print(number + " ");
+		}
 	}
 
 }

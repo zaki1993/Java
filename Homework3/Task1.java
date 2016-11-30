@@ -14,16 +14,18 @@ public class Task1 {
 		}
 		int min = arr[0];
 		for(int i = 0;i<arr.length;i++){
+			if(arr[i]%3 == 0){
+				min = arr[i];
+				break;
+			}
+		}
+		
+		for(int i = 0;i<arr.length;i++){
 			if(arr[i]%3 == 0 && arr[i]<min){
 				min = arr[i];
 			}
 		}
-		if(min%3!=0){
-			System.out.println("There is no such element");
-		}
-		else{
-			System.out.println(min);
-		}
+		System.out.println(min%3!=0?"No such element":min);
 	}
 
 }
