@@ -13,7 +13,7 @@ public class Task7 {
 			int sumCurrent = 0, sumAll = 0;
 			
 			for (int i = 0; i < arr.length; i++) {
-				if(i % 2 == 0){
+				if(i == 0 || i == 2 || i == 4){
 					sumCurrent+= arr[i][0];
 					sumCurrent+= arr[i][2];
 					sumCurrent+= arr[i][4];
