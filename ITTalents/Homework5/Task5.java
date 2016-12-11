@@ -39,6 +39,9 @@ public class Task5 {
 				break;
 			}
 		}
+		if(!flag){
+			System.out.println("The words arent crossing!");
+		}
 		
 	}
 
