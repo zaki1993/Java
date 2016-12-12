@@ -19,14 +19,14 @@ public class Task5 {
 		if(length(dummy) == 0){
 			return true;
 		}
-		else if(frontZeros(number) == nonZeros(dummy)){
-			return palindrome(dummy/power(10, nonZeros(dummy)));
+		else if(frontZeros(number) == backZeros(dummy)){
+			return palindrome(dummy/power(10, backZeros(dummy)));
 		}
-		else if(frontZeros(number) - (length(dummy) - nonZeros(dummy)) != 0){
+		else if(frontZeros(number) - (length(dummy) - backZeros(dummy)) != 0){
 			return false;
 		}
 		else{
-			return palindrome((number - ((number%10*power(10,length(number) - 1)) + number%10))/power(10,length(number) - length(dummy) - 2 + nonZeros(dummy)));
+			return palindrome((number - ((number%10*power(10,length(number) - 1)) + number%10))/power(10,length(number) - length(dummy) - 2 + backZeros(dummy)));
 		}
 	}
 	
@@ -47,7 +47,7 @@ public class Task5 {
 		return result;
 	}
 	
-	public static int nonZeros(int num){
+	public static int backZeros(int num){
 		int result = 0;
 		while(num%10==0){
 				result++;
