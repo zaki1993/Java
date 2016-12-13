@@ -45,7 +45,7 @@ public class Task5 {
 	public static int backZeros(int num){
 		int result = 0;
 		while(num%10==0){
-				result++;
+			result++;
 			num/=10;
 		}
 		return result;
