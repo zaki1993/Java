@@ -42,6 +42,7 @@ public class Task5 {
 		return result;
 	}
 	
+	//Връща броя на нулите след числото след промахване на цифра
 	public static int backZeros(int num){
 		int result = 0;
 		while(num%10==0){
@@ -51,6 +52,7 @@ public class Task5 {
 		return result;
 	}
 	
+	//Връща броя на нулите пред числото след премахване на цифра
 	public static int frontZeros(int num){
 		int result = 0;
 		int counter = 2;
