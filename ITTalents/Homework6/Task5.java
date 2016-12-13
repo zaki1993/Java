@@ -2,7 +2,7 @@
 public class Task5 {
 
 	public static void main(String[] args) {
-		System.out.println(palindrome(101010101));
+		System.out.println(palindrome(101050101));
 	}
 	
 	public static boolean palindrome(int number){
@@ -22,12 +22,7 @@ public class Task5 {
 		else if(frontZeros(number) == backZeros(dummy)){
 			return palindrome(dummy/power(10, backZeros(dummy)));
 		}
-		else if(frontZeros(number) - (length(dummy) - backZeros(dummy)) != 0){
-			return false;
-		}
-		else{
-			return palindrome((number - ((number%10*power(10,length(number) - 1)) + number%10))/power(10,length(number) - length(dummy) - 2 + backZeros(dummy)));
-		}
+		return false;
 	}
 	
 	public static int length(int number){
