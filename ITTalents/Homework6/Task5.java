@@ -42,7 +42,7 @@ public class Task5 {
 		return result;
 	}
 	
-	//Връща броя на нулите след числото след промахване на цифра
+	//Връща броя на нулите след числото след прeмахване на цифра
 	public static int backZeros(int num){
 		int result = 0;
 		while(num%10==0){
