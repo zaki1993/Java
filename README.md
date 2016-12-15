@@ -30,4 +30,10 @@ lastIndexOf(String)  - Returns the last occurrence of the string.
 toLowerCase() - Returns all the letters of the string in lower case.
 
 toUpperCase() - Returns all the letters of the string in upper case.
+
+trim() - Removes the spaces in the beginning and the end of the string.
+
+split(symbol) - Splits the words by a given symbol and adds them to array.
+
+join(symbol) - Takes array of chars and joins the words with the given symbol and puts them into string.
 ```
