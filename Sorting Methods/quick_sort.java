@@ -10,23 +10,22 @@ public class quick_sort {
 	
 	public static int partition(int arr[], int left, int right)
 	{
-	      int i = left, j = right;
 	      int tmp;
 	      int pivot = arr[(left + right) / 2];	     
-	      while (i <= j) {
-	            while (arr[i] < pivot)
-	                  i++;
-	            while (arr[j] > pivot)
-	                  j--;
-	            if (i <= j) {
-	                  tmp = arr[i];
-	                  arr[i] = arr[j];
-	                  arr[j] = tmp;
-	                  i++;
-	                  j--;
+	      while (left <= right) {
+	            while (arr[left] < pivot)
+	                  left++;
+	            while (arr[right] > pivot)
+	                  right--;
+	            if (left <= right) {
+	                  tmp = arr[left];
+	                  arr[left] = arr[right];
+	                  arr[right] = tmp;
+	                  left++;
+	                  right--;
 	            }
 	      };
-	      return i;
+	      return left;
 	}
 
 	public static void quickSort(int arr[], int left, int right) {
