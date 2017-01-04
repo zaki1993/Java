@@ -8,7 +8,7 @@ public class quick_sort {
 		System.out.println(Arrays.toString(arr));
 	}
 	
-	public static int findIndex(int arr[], int left, int right)
+	public static int partition(int arr[], int left, int right)
 	{
 	      int i = left, j = right;
 	      int tmp;
@@ -30,7 +30,7 @@ public class quick_sort {
 	}
 
 	public static void quickSort(int arr[], int left, int right) {
-	      int index = findIndex(arr, left, right);
+	      int index = partition(arr, left, right);
 	      if (left < index - 1){
 	            quickSort(arr, left, index - 1);
 	      }
