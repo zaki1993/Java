@@ -6,7 +6,7 @@ public class binary_search {
 	
 	public static int binary_search(int[] arr,int x, int left, int right){
 		int middle = (left + right)/2;
-		if(arr[0] > x || arr[arr.length - 1] < x){
+		if(left > right || arr[0] > x || arr[arr.length - 1] < x){
 			return -1; //if the given value is not in the array
 		}
 		if(arr[middle] < x){
