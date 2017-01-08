@@ -30,6 +30,9 @@ public class quick_sort {
 	}
 
 	public static void quickSort(int arr[], int left, int right) {
+	      if(left >= right){
+	      	    return;
+	      }
 	      int index = partition(arr, left, right);
 	      if (left < index - 1){
 	    	  	//call quicksort for the left of the pivot
