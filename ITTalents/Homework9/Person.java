@@ -21,6 +21,20 @@ public class Person {
 	public boolean getIsMale(){
 		return this.isMale;
 	}
+
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public void setAge(int age){
+		if(age > 0){
+			this.age = age;
+		}
+	}
+	
+	public void setMale(boolean isMale){
+		this.isMale = isMale;
+	}
 	
 	public void showPersonInfo(){
 		System.out.println("Name: " + this.name + " , Age: " + this.age + " , isMale: "  + this.isMale );
