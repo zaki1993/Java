@@ -3,7 +3,17 @@ public class Employee {
 	private final String name;
 	private Task currentTask;
 	private int hoursLeft;
-	public static AllWork allwork = new AllWork(12);
+	private static AllWork allwork = new AllWork(12);
+	
+	public static AllWork getAllWork(){
+		return Employee.allwork;
+	}
+	
+	public static void setAllWork(AllWork newAllWork){
+		if(newAllWork != null){
+			Employee.allwork = newAllWork;
+		}
+	}
 	
 	Employee(String name){
 		this.name = name;
@@ -63,16 +73,6 @@ public class Employee {
 	void setHoursLeft(int hours){
 		if(hours > 0){	
 			this.hoursLeft = hours;
-		}
-	}
-	
-	AllWork getAllWork(){
-		return Employee.allwork;
-	}
-	
-	void setAllWork(AllWork newAllWork){
-		if(newAllWork != null){
-			Employee.allwork = newAllWork;
 		}
 	}
 }

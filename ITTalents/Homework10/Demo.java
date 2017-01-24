@@ -2,19 +2,21 @@
 public class Demo {
 
 	public static void main(String[] args) {
-
-		Employee.allwork.addTask(new Task("Smqtane", 3));
-		Employee.allwork.addTask(new Task("Qdene", 1));
-		Employee.allwork.addTask(new Task("Spane", 12));
-		Employee.allwork.addTask(new Task("Uchene", 9));
-		Employee.allwork.addTask(new Task("Tichane", 4));
-		Employee.allwork.addTask(new Task("Hakvane", 24));
-		Employee.allwork.addTask(new Task("Bombandirane", 17));
-		Employee.allwork.addTask(new Task("Qdene", 2));
-		Employee.allwork.addTask(new Task("Piene", 10));
-		Employee.allwork.addTask(new Task("Pazaruvane", 3));
-		Employee.allwork.addTask(new Task("Murzeluvane", 5));
-		Employee.allwork.addTask(new Task("Chistene", 8));
+		AllWork allwork = new AllWork(12);
+		
+		allwork.addTask(new Task("Smqtane", 3));
+		allwork.addTask(new Task("Qdene", 1));
+		allwork.addTask(new Task("Spane", 12));
+		allwork.addTask(new Task("Uchene", 9));
+		allwork.addTask(new Task("Tichane", 4));
+		allwork.addTask(new Task("Hakvane", 24));
+		allwork.addTask(new Task("Bombandirane", 17));
+		allwork.addTask(new Task("Qdene", 2));
+		allwork.addTask(new Task("Piene", 10));
+		allwork.addTask(new Task("Pazaruvane", 3));
+		allwork.addTask(new Task("Murzeluvane", 5));
+		allwork.addTask(new Task("Chistene", 8));
+		Employee.setAllWork(allwork);
 		
 		Employee[] workers = new Employee[5];
 		workers[0] = new Employee("Pesho");
@@ -24,13 +26,16 @@ public class Demo {
 		workers[4] = new Employee("Ivan");
 		int countDays = 0;
 		
-		while(!Employee.allwork.isAllWorkDone()){
+		while(true){
 			for (int i = 0; i < workers.length; i++) {
 				if(workers[i] != null){
 					workers[i].work();
 				}
 			}
 			countDays++;
+			if(Employee.getAllWork().isAllWorkDone()){
+				break;
+			}
 		}
 		System.out.println("The employees completed the tasks for: " + countDays + " days!");
 	}
