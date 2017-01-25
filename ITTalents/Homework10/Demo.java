@@ -2,20 +2,29 @@
 public class Demo {
 
 	public static void main(String[] args) {
-		AllWork allwork = new AllWork(12);
-		
-		allwork.addTask(new Task("Smqtane", 3));
-		allwork.addTask(new Task("Qdene", 1));
-		allwork.addTask(new Task("Spane", 12));
-		allwork.addTask(new Task("Uchene", 9));
-		allwork.addTask(new Task("Tichane", 4));
-		allwork.addTask(new Task("Hakvane", 24));
-		allwork.addTask(new Task("Bombandirane", 17));
-		allwork.addTask(new Task("Qdene", 2));
-		allwork.addTask(new Task("Piene", 10));
-		allwork.addTask(new Task("Pazaruvane", 3));
-		allwork.addTask(new Task("Murzeluvane", 5));
-		allwork.addTask(new Task("Chistene", 8));
+		AllWork allwork = new AllWork(21);
+		allwork.addTask(new TaskTichane("ticham1", 5));
+		allwork.addTask(new TaskTichane("ticham1", 5));
+		allwork.addTask(new TaskTichane("ticham1", 5));
+		allwork.addTask(new TaskTichane("ticham1", 5));
+		allwork.addTask(new TaskTichane("ticham1", 5));
+		allwork.addTask(new TaskTichane("ticham1", 5));
+		allwork.addTask(new TaskTichane("ticham1", 5));
+		allwork.addTask(new TaskTichane("ticham1", 5));
+		allwork.addTask(new TaskTichane("ticham1", 5));
+		allwork.addTask(new TaskTichane("ticham1", 5));
+		allwork.addTask(new TaskTichane("ticham1", 5));
+		allwork.addTask(new TaskQdene("qm", 4));
+		allwork.addTask(new TaskQdene("qm", 4));
+		allwork.addTask(new TaskQdene("qm", 4));
+		allwork.addTask(new TaskQdene("qm", 4));
+		allwork.addTask(new TaskQdene("qm", 4));
+		allwork.addTask(new TaskQdene("qm", 4));
+		allwork.addTask(new TaskQdene("qm", 4));
+		allwork.addTask(new TaskQdene("qm", 4));
+		allwork.addTask(new TaskQdene("qm", 4));
+		allwork.addTask(new TaskQdene("qm", 4));
+		allwork.addTask(new TaskQdene("qm", 4));
 		Employee.setAllWork(allwork);
 		
 		Employee[] workers = new Employee[5];

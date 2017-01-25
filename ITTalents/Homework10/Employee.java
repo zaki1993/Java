@@ -3,7 +3,7 @@ public class Employee {
 	private final String name;
 	private Task currentTask;
 	private int hoursLeft;
-	private static AllWork allwork = new AllWork(12);
+	private static AllWork allwork;
 	
 	public static AllWork getAllWork(){
 		return Employee.allwork;
@@ -20,9 +20,6 @@ public class Employee {
 		this.hoursLeft = 8;
 		if(!allwork.isAllWorkDone()){	
 			this.currentTask = allwork.getNextTask();
-		}
-		else{
-			this.currentTask = new Task();
 		}
 	}
 	
