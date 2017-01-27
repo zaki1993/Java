@@ -4,7 +4,7 @@ public class SecureNotepad extends SimpleNotepad{
 
 	private final String PASSWORD;
 	private final Scanner sc = new Scanner(System.in);
-	private static final String PASSWORD_REGEX = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}";
+	private static final String PASSWORD_REGEX = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{5,}";
 	
 	public SecureNotepad(final int MAX_PAGES,final String PASSWORD) throws Exception {
 		super(MAX_PAGES);
