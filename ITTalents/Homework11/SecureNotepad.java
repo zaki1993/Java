@@ -24,7 +24,6 @@ public class SecureNotepad extends SimpleNotepad{
 			return true;
 		}
 		System.out.println("Access denied!");
-		System.out.println("Please, enter again: ");
 		return matchPasswords();
 	}
 	
@@ -32,7 +31,6 @@ public class SecureNotepad extends SimpleNotepad{
 	void addPage(Page newPage){
 		if(matchPasswords()){
 			super.addPage(newPage);
-			return;
 		}
 	}
 	
@@ -40,7 +38,6 @@ public class SecureNotepad extends SimpleNotepad{
 	public void addText(String text, int pageNumber) {
 		if(matchPasswords()){
 			super.addText(text, pageNumber);
-			return;
 		}
 	}
 
@@ -48,7 +45,6 @@ public class SecureNotepad extends SimpleNotepad{
 	public void rewriteText(String text, int pageNumber) {
 		if(matchPasswords()){
 			super.rewriteText(text, pageNumber);
-			return;
 		}
 	}
 
@@ -56,7 +52,6 @@ public class SecureNotepad extends SimpleNotepad{
 	public void deleteText(int pageNumber) {
 		if(matchPasswords()){
 			super.deleteText(pageNumber);
-			return;
 		}
 	}
 
@@ -64,7 +59,6 @@ public class SecureNotepad extends SimpleNotepad{
 	public void printPages() {
 		if(matchPasswords()){
 			super.printPages();
-			return;
 		}
 	}
 	
