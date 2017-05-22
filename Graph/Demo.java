@@ -1,0 +1,16 @@
+
+public class Demo {
+	public static void main(String[] args) {
+		Graph x = new Graph();
+		for (int i = 0; i < 10; i++) {
+			x.addVertex(i);
+		}
+		x.addEdge(1, 2);
+		x.addEdge(3, 2);
+		x.addEdge(2, 4);
+		x.addEdge(3, 5);
+		x.addEdge(4, 5);
+		x.BFS(3);
+		//x.DFS(3);
+	}
+}
