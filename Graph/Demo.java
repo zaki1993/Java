@@ -10,7 +10,11 @@ public class Demo {
 		x.addEdge(2, 4);
 		x.addEdge(3, 5);
 		x.addEdge(4, 5);
+		
+		System.out.println("BFS: ");
 		x.BFS(3);
-		//x.DFS(3);
+		
+		System.out.println("DFS: ");
+		x.DFS(3);
 	}
 }
