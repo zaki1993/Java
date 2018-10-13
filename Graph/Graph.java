@@ -40,6 +40,9 @@ public class Graph {
 		}
 	}
 	
+	/**
+	 * Breadth first search
+	 */
 	public void BFS(int start){
 		
 		if(vertices.containsKey(start)){
@@ -66,6 +69,9 @@ public class Graph {
 		}
 	}
 	
+	/**
+	 * Depth first search
+	 */
 	public void DFS(int start) {
 		
 		if (vertices.containsKey(start)) {
@@ -89,6 +95,41 @@ public class Graph {
 				if (!visited.get(i)) {
 					visited.put(i, true);
 					dfs_do(i, visited, stack);
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Depth limited search
+	 */
+	public void DLS(int start, int limit) {
+		if (vertices.containsKey(start) && limit >= 0) {
+			
+			Map<Integer, Boolean> visited = new HashMap<>();
+			for(Entry<Integer, List<Integer>> i : vertices.entrySet()){
+				visited.put(i.getKey(), false);
+			}
+			
+			dls_do(start, limit, visited, new Stack<Integer>());
+		}
+	}
+	
+	public void dls_do(int start, int limit, Map<Integer, Boolean> visited, Stack<Integer> stack) {
+		
+		if (limit == 0) {
+			System.out.println(start);
+		} else {
+			stack.push(start);
+			visited.put(start, true);
+			while (!stack.isEmpty()) {
+				int top = stack.pop();
+				System.out.println(top);
+				for (int i : vertices.get(top)) {
+					if (!visited.get(i)) {
+						visited.put(i, true);
+						dls_do(i, limit - 1, visited, stack);
+					}
 				}
 			}
 		}

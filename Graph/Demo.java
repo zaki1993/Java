@@ -16,5 +16,8 @@ public class Demo {
 		
 		System.out.println("DFS: ");
 		x.DFS(3);
+		
+		System.out.println("DLS: ");
+		x.DLS(3, 2);
 	}
 }
