@@ -1,27 +1,28 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Queue;
 import java.util.Stack;
 
 public class Graph {
 	
-	private HashMap<Integer, ArrayList<Integer>> vertices;
+	private Map<Integer, List<Integer>> vertices;
 	
-	Graph(){
-		
+	public Graph(){
 		this.vertices = new HashMap<>();
 	}
 	
-	void addVertex(int number){
+	public void addVertex(int number){
 		
 		if(!vertices.containsKey(number)){
 			vertices.put(new Integer(number), new ArrayList<>());
 		}
 	}
 	
-	void addEdge(int from, int to){
+	public void addEdge(int from, int to){
 		
 		if(!vertices.containsKey(from)){
 			addVertex(from);
@@ -36,31 +37,29 @@ public class Graph {
 		}
 	}
 	
-	void BFS(int start){
+	public void BFS(int start){
 		
-		if(!vertices.containsKey(start)){
-			return;
-		}
-		
-		HashMap<Integer, Boolean> visited = new HashMap<>();
-		for(Entry<Integer, ArrayList<Integer>> i : vertices.entrySet()){
-			visited.put(i.getKey(), false);
-		}
-		
-		Queue<Integer> queue = new LinkedList<>();
-		queue.add(start);
-
-		visited.put(start, true);
-		
-		while(!queue.isEmpty()){
-			Integer top = queue.poll();
-			System.out.println(top);
-			for(Integer i : vertices.get(top)){
-				if(!visited.get(i)){
-					visited.put(i, true);
-					queue.add(i);
-				}
+		if(vertices.containsKey(start)){
+			Map<Integer, Boolean> visited = new HashMap<>();
+			for(Entry<Integer, List<Integer>> i : vertices.entrySet()){
+				visited.put(i.getKey(), false);
 			}
-		}	
+			
+			Queue<Integer> queue = new LinkedList<>();
+			queue.add(start);
+	
+			visited.put(start, true);
+			
+			while(!queue.isEmpty()){
+				Integer top = queue.poll();
+				System.out.println(top);
+				for(Integer i : vertices.get(top)){
+					if(!visited.get(i)){
+						visited.put(i, true);
+						queue.add(i);
+					}
+				}
+			}	
+		}
 	}
 }
